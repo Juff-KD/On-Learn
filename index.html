@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>On Learn</title>
     <link rel="stylesheet" href="css/main.css" />
-    <!-- <script src="https://cdn.jsdelivr.net/npm/showdown@2.0.0/dist/showdown.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/showdown@2.0.0/dist/showdown.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Markdown-Tag/markdown-tag-GitHub.js"></script>
   </head>
   <body>
@@ -20,5 +20,20 @@
     <github-md># Example </github-md>
   </body>
 
-  <script></script>
+  <script>
+    const data =
+      "https://raw.githubusercontent.com/Juff-KD/On-Learn/18c750d878a8b53c542593340a6a56a5be16a93c/script/hello.md";
+
+    fetch(data)
+      .then((response) => response.text())
+      .then((markdown) => {
+        const converter = new showdown.Converter();
+        const html = converter.makeHtml(markdown);
+        document.getElementById("markdown-content").innerHTML = html;
+      })
+      .catch((error) => {
+        console.error("Error fetching or converting Markdown:", error);
+        // Handle errors gracefully, e.g., display an error message to the user
+      });
+  </script>
 </html>
