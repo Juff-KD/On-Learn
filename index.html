@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Free Learn" />
-    <meta name="keywords" content="HTML, CSS, JavaScript" />
-    <meta name="author" content="Juff" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>On Learn</title>
-    <link rel="stylesheet" href="css/main.css" />
-    <script src="https://cdn.jsdelivr.net/npm/showdown@2.0.0/dist/showdown.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Markdown-Tag/markdown-tag-GitHub.js"></script>
-  </head>
-  <body>
-    <div>Hello Juff</div>
-    <div id="markdown-content"></div>
-    <!-- <iframe src="https://raw.githubusercontent.com/Juff-KD/On-Learn/18c750d878a8b53c542593340a6a56a5be16a93c/script/hello.md" frameborder="0"></iframe> -->
-    <!-- <a href="https://juff-kd.github.io/On-Learn/script/hello.md">mdlink</a> -->
 
-    <github-md>#Example</github-md>
- <md>##this is mdtag</md>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Free Learn" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="Juff" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>On Learn</title>
+  <!-- <link rel="stylesheet" href="css/main.css" /> -->
+  <script src="https://cdn.jsdelivr.net/npm/showdown@2.0.0/dist/showdown.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Markdown-Tag/markdown-tag-GitHub.js"></script>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <style type="text/tailwindcss">
+    @theme {
+        --color-clifford: #da373d;
+      }
+    </style>
+</head>
 
-  <script>
-    const data ="https://raw.githubusercontent.com/Juff-KD/On-Learn/18c750d878a8b53c542593340a6a56a5be16a93c/script/hello.md";
+<body>
+  <nav id="nav"></nav>
+  <div id="root"></div>
+  <!-- <input type="email" id="UserEmail" placeholder="john@rhcp.com" class="input input-success input-sm " /> -->
 
-    fetch(data)
-      .then((response) => response.text())
-      .then((markdown) => {
-        const converter = new showdown.Converter();
-        const html = converter.makeHtml(markdown);
-        document.getElementById("markdown-content").innerHTML = html;
-      })
-      .catch((error) => {
-        console.error("Error fetching or converting Markdown:", error);
-        // Handle errors gracefully, e.g., display an error message to the user
-      });
-  </script>
+  <!-- <div id=" markdown-content">
+  </div> -->
+  <!-- <github-md>#Example</github-md> -->
+  <!-- <md>##this is mdtag</md> -->
+</body>
+
+<script src="script/script.js"></script>
+<script src="script/theme.js"></script>
+
 </html>
