@@ -44,19 +44,19 @@
 const data =
   "https://raw.githubusercontent.com/Juff-KD/On-Learn/18c750d878a8b53c542593340a6a56a5be16a93c/script/hello.md";
 
-fetch(data)
-  .then((response) => response.text())
-  .then((markdown) => {
-    // fetchedMarkdownData = markdown;
-
-    const converter = new showdown.Converter();
-    const html = converter.makeHtml(markdown);
-    document.getElementById("ptag").innerHTML += html;
-  })
-  .catch((error) => {
-    console.error("Error fetching or converting Markdown:", error);
-    // Handle errors gracefully, e.g., display an error message to the user
-  });
+// fetch(data)
+//   .then((response) => response.text())
+//   .then((markdown) => {
+//     // fetchedMarkdownData = markdown;
+//
+//     const converter = new showdown.Converter();
+//     const html = converter.makeHtml(markdown);
+//     document.getElementById("ptag").innerHTML += html;
+//   })
+//   .catch((error) => {
+//     console.error("Error fetching or converting Markdown:", error);
+//     // Handle errors gracefully, e.g., display an error message to the user
+//   });
 //---------------------------------++++++++++++---------------------------------------//
 // JS..
 // Less Code.. do more..
@@ -128,10 +128,11 @@ fmtHtml(root, "div", "rootContainer", "", "");
 fmtHtml(rootContainer, "h2", "titlRoot", "", "Little Sources");
 fmtHtml(rootContainer, "div", "rootNav", "", "");
 fmtHtml(rootNav, "span", "rootNavTitle", "", "");
-fmtHtml(rootNavTitle, "li", "nav-ui", "", "ui");
-fmtHtml(rootNavTitle, "li", "nav-color", "", "color");
-fmtHtml(rootNavTitle, "li", "nav-icons", "", "icons");
-fmtHtml(rootNavTitle, "li", "nav-other", "", "other");
+fmtHtml(rootNavTitle, "ul", "forLists", "", "");
+fmtHtml(forLists, "li", "nav-ui", "", "ui");
+fmtHtml(forLists, "li", "nav-color", "", "color");
+fmtHtml(forLists, "li", "nav-icons", "", "icons");
+fmtHtml(forLists, "li", "nav-other", "", "other");
 //
 // // root-source
 // fmtHtml(rootContainer, "div", "rootSrc", "", "");
