@@ -10,15 +10,15 @@ const themes = {
 };
 
 function applyTheme(theme) {
-  const root = document.documentElement;
+  const rootTheme = document.documentElement;
   if (theme === 'dark') {
-    root.classList.add('dark');
+    rootTheme.classList.add('dark');
   } else {
-    root.classList.remove('dark');
+    rootTheme.classList.remove('dark');
   }
 
-  root.style.backgroundColor = themes[theme].backgroundColor;
-  root.style.color = themes[theme].textColor;
+  rootTheme.style.backgroundColor = themes[theme].backgroundColor;
+  rootTheme.style.color = themes[theme].textColor;
 }
 
 function toggleTheme() {
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const toggleButton = document.createElement('button');
   toggleButton.textContent = 'Toggle Theme';
-  toggleButton.className = 'mt-4 px-4 py-2 bg-blue-500 text-white rounded';
+  toggleButton.className = 'btn btn-primary';
   toggleButton.addEventListener('click', toggleTheme);
   document.body.appendChild(toggleButton);
 });
