@@ -1,62 +1,3 @@
-// Notes for later..
-// -----------------+++++-------------------------------//
-// :NOTE1: tips to handle the workspace..
-// function showContent(targetId) {
-// Hide all content sections
-//   document.querySelectorAll('[id^="content"]').forEach((content) => {
-//     content.classList.add('hidden');
-//   });
-//
-//   // Show the target content section
-//   const targetContent = document.getElementById(targetId);
-//   if (targetContent) {
-//     targetContent.classList.remove('hidden');
-//   }
-// }
-//
-// document.querySelectorAll('button[data-target]').forEach((button) => {
-//   button.addEventListener('click', () => {
-//     const targetId = button.getAttribute('data-target');
-//     showContent(targetId);
-//   });
-// });
-//
-// // Optionally, show the first content by default
-// showContent('content1');
-//-------------------+++++-----------------------------//
-// :NOTE2: tips to handle the workspace..
-// // script.js
-
-// $(document).ready(function () {
-// Hide all content sections except the first one
-//   $('[id^="content"]').hide();
-//   $('#content1').show();
-//
-//   // Add click event listeners to buttons
-//   $('button[data-target]').click(function () {
-//     const targetId = $(this).attr('data-target'); // Get the target content ID
-//     $('[id^="content"]').hide(); // Hide all content sections
-//     $(`#${targetId}`).show(); // Show the target content section
-//   });
-// });
-// -----------------------------++++++-------------------//
-//// MdRendering in HTML
-// const data =
-//   "https://raw.githubusercontent.com/Juff-KD/On-Learn/18c750d878a8b53c542593340a6a56a5be16a93c/script/hello.md";
-
-// fetch(data)
-//   .then((response) => response.text())
-//   .then((markdown) => {
-//     // fetchedMarkdownData = markdown;
-//
-//     const converter = new showdown.Converter();
-//     const html = converter.makeHtml(markdown);
-//     document.getElementById("ptag").innerHTML += html;
-//   })
-//   .catch((error) => {
-//     console.error("Error fetching or converting Markdown:", error);
-//     // Handle errors gracefully, e.g., display an error message to the user
-//   });
 //---------------------------------++++++++++++---------------------------------------//
 // JS..
 // Less Code.. do more..
@@ -106,47 +47,47 @@ function sngHtml(a, tagName, [Params], CLASS) {
 //-------------------------------+++++++++++++---------------------------------//
 
 // const searchSvg= '<svg fill="#000000" width="800px" height="800px" viewBox="0 0 24 24" id="search" data-name="Line Color" xmlns="http://www.w3.org/2000/svg" class="icon line-color"><line id="secondary" x1="21" y1="21" x2="15" y2="15" style="fill: none; stroke: rgb(44, 169, 188); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></line><circle id="primary" cx="10" cy="10" r="7" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></circle></svg>';
-const searchSvg2='<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 20 20" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>';
-const ThemeBtn =`
-<label class="grid cursor-pointer place-items-center">
-  <input
-    type="checkbox"
-    value="synthwave"
-    class="toggle theme-controller bg-base-content col-span-2 col-start-1 row-start-1" />
-  <svg
-    class="stroke-base-100 fill-base-100 col-start-1 row-start-1"
-    xmlns="http://www.w3.org/2000/svg"
-    width="14"
-    height="14"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round">
-    <circle cx="12" cy="12" r="5" />
-    <path
-      d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
-  </svg>
-  <svg
-    class="stroke-base-100 fill-base-100 col-start-2 row-start-1"
-    xmlns="http://www.w3.org/2000/svg"
-    width="14"
-    height="14"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round">
-    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-  </svg>
-</label>`;
+const searchSvg2 = '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 20 20" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>';
+// const ThemeBtn = `
+// <label class="grid cursor-pointer place-items-center">
+//   <input
+//     type="checkbox"
+//     value="synthwave"
+//     class="toggle theme-controller bg-base-content col-span-2 col-start-1 row-start-1" />
+//   <svg
+//     class="stroke-base-100 fill-base-100 col-start-1 row-start-1"
+//     xmlns="http://www.w3.org/2000/svg"
+//     width="14"
+//     height="14"
+//     viewBox="0 0 24 24"
+//     fill="none"
+//     stroke="currentColor"
+//     stroke-width="2"
+//     stroke-linecap="round"
+//     stroke-linejoin="round">
+//     <circle cx="12" cy="12" r="5" />
+//     <path
+//       d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+//   </svg>
+//   <svg
+//     class="stroke-base-100 fill-base-100 col-start-2 row-start-1"
+//     xmlns="http://www.w3.org/2000/svg"
+//     width="14"
+//     height="14"
+//     viewBox="0 0 24 24"
+//     fill="none"
+//     stroke="currentColor"
+//     stroke-width="2"
+//     stroke-linecap="round"
+//     stroke-linejoin="round">
+//     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+//   </svg>
+// </label>`;
 
 const ThemeChangeBtn = `
-<label class="swap swap-rotate">
+<label class="swap swap-rotate">  
   <!-- this hidden checkbox controls the state -->
-  <input type="checkbox" class="theme-controller" value="autumn" />
+ <input type="checkbox" class="theme-controller" value="light"/> 
 <!-- sun icon -->
   <svg
     class="swap-on h-9 w-9 fill-current "
@@ -157,7 +98,7 @@ const ThemeChangeBtn = `
   </svg>
 
   <!-- moon icon -->
-  <svg
+  <svg 
     class="swap-off h-9 w-9 fill-current"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24">
@@ -166,12 +107,14 @@ const ThemeChangeBtn = `
   </svg>
 </label>`;
 
+
+
 const ProfileAvatar = `<div class="avatar online placeholder"> 
 <div class="bg-neutral text-neutral-content w-12 rounded-full">
 <span class="text-xl">AI</span></div></div>`;
 //-----------------------------+++++++-----------------------------------------//
 //html..
-fmtHtml("nav", "div", "BtnNav", "flex","");
+fmtHtml("nav", "div", "BtnNav", "flex", "");
 
 flxHtml(
   "BtnNav",
@@ -200,14 +143,14 @@ flxHtml(
   "button",
   ["id=BtnThemeChange"],
   "",
- ThemeChangeBtn 
+  ThemeChangeBtn
 )
 flxHtml(
   "BtnMenu",
   "button",
   ["id=Profile"],
   "",
- ProfileAvatar 
+  ProfileAvatar
 )
 //----------------+nav+--------------------
 // sngHtml(nav, "img", ["src=  , alt=search"], "");
@@ -250,11 +193,11 @@ jQuery.noConflict();
 function readyDoc($) {
   $('[id^="rootContainer"]').hide();
   // Add click event listeners to buttons
-  $("button[data-target]").click(function () {
+  $("button[data-target]").click(function() {
     const targetId = $(this).attr("data-target"); // Get the target content ID
     // $('[id^="root"]').hide(); // Hide all content sections
     $(`#${targetId}`).toggle(); // Show the target content section
-      // $('[id^="rootContainer"]').toggle();
+    // $('[id^="rootContainer"]').toggle();
   });
 
   //-----------------##########-------------------
