@@ -2,7 +2,7 @@
 // Less Code.. do more..
 //Js Vars..
 const ProfileAvatar = `<div class="avatar online placeholder">
-<div class="bg-neutral text-neutral-content w-10 rounded-full">
+<div class="bg-neutral text-neutral-content w-11 rounded-full">
 <span class="text-xl">AI</span></div></div>`;
 
 // const searchSvg= '<svg fill="#000000" width="800px" height="800px" viewBox="0 0 24 24" id="search" data-name="Line Color" xmlns="http://www.w3.org/2000/svg" class="icon line-color"><line id="secondary" x1="21" y1="21" x2="15" y2="15" style="fill: none; stroke: rgb(44, 169, 188); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></line><circle id="primary" cx="10" cy="10" r="7" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></circle></svg>';
@@ -85,7 +85,7 @@ function sngHtml(a, tagName, [Params], CLASS) {
 
 //-----------------------------+++++++-----------------------------------------//
 //html..
-fmtHtml("nav", "div", "BtnNav", "static m-0 flex items-center gap-x-12 place-self-center", "");
+fmtHtml("nav", "div", "BtnNav", "static m-0 flex items-center gap-x-16 place-content-center", "");
 
 flxHtml(
   "BtnNav",
@@ -99,7 +99,7 @@ fmtHtml(
   "BtnNav",
   "span",
   "BtnMenu",
-  "flex gap-x-2 items-center mt-2",
+  "flex gap-x-4 items-center mt-2",
   ""
 );
 
@@ -176,7 +176,7 @@ function readyDoc($) {
   $('#rootContainer1').show();
   // Add click event listeners to buttons
   // $('#rootContainer1').show();
-  $('button[data-target]').click(function () {
+  $('button[data-target]').click(function() {
     const targetId = $(this).attr('data-target'); // Get the target content ID
     $('[id^="rootContainer"]').hide(); // Hide all content sections
     // $('#rootContainer1').hide();
