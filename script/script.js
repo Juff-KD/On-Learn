@@ -1,88 +1,13 @@
-//---------------------------------++++++++++++---------------------------------------//
 // JS..
 // Less Code.. do more..
-const root = document.getElementById("root");
-const nav = document.getElementById("nav");
-
-function fmtHtml(a, tagName, ID, CLASS, value) {
-  const n = `<${tagName} id=${ID} class="${CLASS}">${value}</${tagName}>`;
-  document.getElementById(a).innerHTML += n;
-}
-
-function flxHtml(a, tagName, [Params], CLASS, value) {
-  const Arr = [`${Params}`].join(",");
-  const n = `<${tagName} ${Arr} class="${CLASS}">${value}</${tagName}>`;
-  document.getElementById(a).innerHTML += n;
-}
-
-function sngTHtml(a, tagName, [Params], CLASS) {
-  const Arr = [`${Params}`].join(",");
-  const n = `<${tagName} ${Arr} class="${CLASS}" />`;
-  document.getElementById(a).innerHTML += n;
-}
-
-function sngHtml(a, tagName, [Params], CLASS) {
-  const Arr = [`${Params}`].join(",");
-  const n = `<${tagName} ${Arr} class="${CLASS}">`;
-  document.getElementById(a).innerHTML += n;
-}
-
-// fmtHtml(
-//   root,
-//   "p",
-//   "testP",
-//   "text-8xl font-bold text-purple-500",
-//   "RendTest with tailwindcss",
-// );
-//
-// sngHtml(
-//   root,
-//   "input",
-//   // "type = email id = UserEmail placeholder = john@rhcp.com",
-//   ["type = email , id = UserEmail , placeholder = john@rhcp.com"],
-//   "mt-1 w-sm-20 rounded-md border-red-500",
-// );
-
-// fmtHtml(root, "button", "Btn", "btn btn-primary", "Button");
-//-------------------------------+++++++++++++---------------------------------//
+//Js Vars..
+const ProfileAvatar = `<div class="avatar online placeholder">
+<div class="bg-neutral text-neutral-content w-10 rounded-full">
+<span class="text-xl">AI</span></div></div>`;
 
 // const searchSvg= '<svg fill="#000000" width="800px" height="800px" viewBox="0 0 24 24" id="search" data-name="Line Color" xmlns="http://www.w3.org/2000/svg" class="icon line-color"><line id="secondary" x1="21" y1="21" x2="15" y2="15" style="fill: none; stroke: rgb(44, 169, 188); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></line><circle id="primary" cx="10" cy="10" r="7" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></circle></svg>';
-const searchSvg2 = '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 20 20" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>';
-// const ThemeBtn = `
-// <label class="grid cursor-pointer place-items-center">
-//   <input
-//     type="checkbox"
-//     value="synthwave"
-//     class="toggle theme-controller bg-base-content col-span-2 col-start-1 row-start-1" />
-//   <svg
-//     class="stroke-base-100 fill-base-100 col-start-1 row-start-1"
-//     xmlns="http://www.w3.org/2000/svg"
-//     width="14"
-//     height="14"
-//     viewBox="0 0 24 24"
-//     fill="none"
-//     stroke="currentColor"
-//     stroke-width="2"
-//     stroke-linecap="round"
-//     stroke-linejoin="round">
-//     <circle cx="12" cy="12" r="5" />
-//     <path
-//       d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
-//   </svg>
-//   <svg
-//     class="stroke-base-100 fill-base-100 col-start-2 row-start-1"
-//     xmlns="http://www.w3.org/2000/svg"
-//     width="14"
-//     height="14"
-//     viewBox="0 0 24 24"
-//     fill="none"
-//     stroke="currentColor"
-//     stroke-width="2"
-//     stroke-linecap="round"
-//     stroke-linejoin="round">
-//     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-//   </svg>
-// </label>`;
+const searchSvg2 = '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 20 20" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>';
+
 
 const ThemeChangeBtn = `
 <label class="swap swap-rotate">  
@@ -108,19 +33,65 @@ const ThemeChangeBtn = `
 </label>`;
 
 
+const rootNavTitle = `
+<ul class="menu menu-sm menu-horizontal place-content-center bg-base-200 rounded-box">
+  <li><a>Ai</a></li>
+  <li><a>Ui</a></li>
+  <li><a>Colors</a></li>
+<li>
+     <details>
+          <summary>Other</summary>
+          <ul class="p-2">
+            <li><a>Submenu 1</a></li>
+            <li><a>Submenu 2</a></li>
+          </ul>
+        </details>
+</li>
+</ul>
+`;
+//-----------------------------+++++++-----------------------------------------//
+// import { ProfileAvatar } from './Vars.js';
+// import { searchSvg2 } from './Vars.js';
+// import { ThemeChangeBtn } from './Vars.js';
+// import { rootNavTitle } from './Vars.js';
+// import * as Var from './Vars.js';
+// const root = document.getElementById("root");
+// const nav = document.getElementById("nav");
 
-const ProfileAvatar = `<div class="avatar online placeholder"> 
-<div class="bg-neutral text-neutral-content w-12 rounded-full">
-<span class="text-xl">AI</span></div></div>`;
+function fmtHtml(a, tagName, ID, CLASS, value) {
+  const n = `<${tagName} id=${ID} class="${CLASS}">${value}</${tagName}>`;
+  document.getElementById(a).innerHTML += n;
+}
+
+function flxHtml(a, tagName, [Params], CLASS, value) {
+  const Arr = [`${Params}`].join(",");
+  const n = `<${tagName} ${Arr} class="${CLASS}">${value}</${tagName}>`;
+  document.getElementById(a).innerHTML += n;
+}
+
+function sngTHtml(a, tagName, [Params], CLASS) {
+  const Arr = [`${Params}`].join(",");
+  const n = `<${tagName} ${Arr} class="${CLASS}" />`;
+  document.getElementById(a).innerHTML += n;
+}
+
+function sngHtml(a, tagName, [Params], CLASS) {
+  const Arr = [`${Params}`].join(",");
+  const n = `<${tagName} ${Arr} class="${CLASS}">`;
+  document.getElementById(a).innerHTML += n;
+}
+
+//-------------------------------+++++++++++++---------------------------------//
+
 //-----------------------------+++++++-----------------------------------------//
 //html..
-fmtHtml("nav", "div", "BtnNav", "flex", "");
+fmtHtml("nav", "div", "BtnNav", "static m-0 flex items-center gap-x-12 place-self-center", "");
 
 flxHtml(
   "BtnNav",
   "button",
   ["id=BtnSearch"],
-  "btn btn-ghost btn-circle absolute top-2 left-4",
+  "btn btn-ghost btn-circle mt-2",
   searchSvg2
 );
 
@@ -128,57 +99,67 @@ fmtHtml(
   "BtnNav",
   "span",
   "BtnMenu",
-  "flex gap-x-4 items-center absolute top-2 right-4",
+  "flex gap-x-2 items-center mt-2",
   ""
-)
+);
+
 flxHtml(
   "BtnMenu",
   "button",
-  ["data-target=rootContainer"],
+  ["data-target=rootContainer2"],
   "btn btn-sm btn-accent",
-  "Little Sources"
-)
+  "Lil' Sources"
+);
+
 flxHtml(
   "BtnMenu",
   "button",
   ["id=BtnThemeChange"],
   "",
   ThemeChangeBtn
-)
+);
+
 flxHtml(
   "BtnMenu",
   "button",
   ["id=Profile"],
   "",
   ProfileAvatar
-)
+);
+
+//for rootContainer1
+// flxHtml(
+//   "rootSrc",
+//   "article",
+//   ["data-target=rootContainer1"],
+//   "",
+//   ""
+// );
+
 //----------------+nav+--------------------
-// sngHtml(nav, "img", ["src=  , alt=search"], "");
-// fmtHtml(nav, "span", "navcomp", "", "");
-// fmtHtml(navcomp, "li", "", "", "Lil' src");
-// fmtHtml(navcomp, "li", "theme", "", "");
-// sngHtml(theme, "img", ["src= , alt=themes"]);
-// fmtHtml(navcomp, "li", "profile", "", "");
-// sngHtml(profile, "img", ["src= , alt=profile-intro"]);
 //
 // //------------------+root+--------------------
-fmtHtml("root", "div", "rootContainer", "", ""); //:TODO: rootContainer1, rootContainer2.. for other data sources..
-fmtHtml("rootContainer", "h2", "titlRoot", "", "Little Sources");
-fmtHtml("rootContainer", "div", "rootNav", "", "");
-fmtHtml("rootNav", "span", "rootNavTitle", "", "");
-fmtHtml("rootNavTitle", "ul", "forLists", "", "");
-fmtHtml("forLists", "li", "nav-ui", "", "ui");
-fmtHtml("forLists", "li", "nav-color", "", "color");
-fmtHtml("forLists", "li", "nav-icons", "", "icons");
-fmtHtml("forLists", "li", "nav-other", "", "other");
-//
 // // root-source
-// fmtHtml(rootContainer, "div", "rootSrc", "", "");
-// fmtHtml(rootSrc, "div", "imgSrc", "", "");
-// sngHtml(imgSrc, ["src= , alt=source-imgs"], "", "");
-// fmtHtml(rootSrc, "div", "descrSrc", "", "");
-// fmtHtml(descrSrc, "h3", "titleSrc", "", "Introduction..");
-// fmtHtml(descrSrc, "p", "PSrc", "", "This is a..");
+fmtHtml("root", "div", "rootMain", "static m-0 mt-30", "");
+fmtHtml("rootMain", "div", "rootContainer1", "", ""); //:TODO: rootContainer1, rootContainer2.. for other data sources..
+fmtHtml("rootContainer1", "div", "rootSrc", "", "");
+fmtHtml("rootSrc", "div", "imgSrc", "", "");
+sngHtml("imgSrc", ["src= , alt=source-imgs"], "", "");
+fmtHtml("rootSrc", "div", "descrSrc", "", "");
+fmtHtml("descrSrc", "h3", "titleSrc", "", "Introduction..");
+fmtHtml("descrSrc", "p", "PSrc", "", "This is a..");
+
+// Lil' sources..
+fmtHtml("rootMain", "div", "rootContainer2", "grid place-content-center gap-4 text-3xl", ""); //:TODO: rootContainer1, rootContainer2.. for other data sources..
+fmtHtml("rootContainer2", "h1", "titlRoot", "font-mono place-self-center", "Little Sources");
+fmtHtml("rootContainer2", "div", "rootNav", "navbar bg-base-100", "");
+fmtHtml("rootNav", "div", "rootNavTitle", "", rootNavTitle);
+
+// fmtHtml("rootNavTitle", "ul", "forLists", "", "");
+// fmtHtml("forLists", "li", "nav-ai", "", "ai");
+// fmtHtml("forLists", "li", "nav-ui", "", "ui");
+// fmtHtml("forLists", "li", "nav-colors", "", "colors");
+// fmtHtml("forLists", "li", "nav-other", "", "other");
 
 //-------------------------------+++++++++++++---------------------------------//
 // Workspace Handle Seg..
@@ -192,11 +173,14 @@ jQuery.noConflict();
 //ready function
 function readyDoc($) {
   $('[id^="rootContainer"]').hide();
+  $('#rootContainer1').show();
   // Add click event listeners to buttons
-  $("button[data-target]").click(function() {
-    const targetId = $(this).attr("data-target"); // Get the target content ID
-    // $('[id^="root"]').hide(); // Hide all content sections
-    $(`#${targetId}`).toggle(); // Show the target content section
+  // $('#rootContainer1').show();
+  $('button[data-target]').click(function () {
+    const targetId = $(this).attr('data-target'); // Get the target content ID
+    $('[id^="rootContainer"]').hide(); // Hide all content sections
+    // $('#rootContainer1').hide();
+    $(`#${targetId}`).show(); // Show the target content section
     // $('[id^="rootContainer"]').toggle();
   });
 
