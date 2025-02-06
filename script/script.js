@@ -78,6 +78,11 @@ const rootSideData = `
             <p>This is the content of section 6.</p>
             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </article>
+        <article id="highlightLearn">
+            <h2>Section 7</h2>
+            <p>This is the content of section 6.</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </article>
 `;
 
 
@@ -235,7 +240,7 @@ fmtHtml(
   "rootSrc",
   "div",
   "rootSrcData",
-  "mt-30 ml-8 scroll-smooth overflow-y-auto w-60 text-pretty",
+  "mt-30 ml-8 scroll-smooth overflow-y-auto w-48 text-pretty",
   rootSideData
 );
 fmtHtml("rootSrc", "div", "rootSide", "fixed top-22 right-2 z-101", "");
