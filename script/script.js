@@ -24,7 +24,7 @@ const rootSideIcon = `
 </label>
 </div>
 
-<div class="drawer-side mt-30">
+<div class="drawer-side mt-20">
     <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
 <ul class="menu bg-base-100 text-base-content min-h-full w-56">
   <li><a href="#intro">Introduction</a></li>
@@ -48,7 +48,7 @@ const rootSideIcon = `
 `;
 
 const rootSideData = `
-<article id="intro">
+<article id="intro" class="scroll-mt-40">
             <h2>Section 1</h2>
             <p>This is the content of section 1.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -171,7 +171,7 @@ function sngHtml(a, tagName, [Params], CLASS) {
 
 //-----------------------------+++++++-----------------------------------------//
 //html..
-fmtHtml("nav", "div", "BtnNavMain", "fixed z-100 flex bg-base-100 pl-3 pr-3 pb-20 items-center gap-x-14 place-content-center", "");
+fmtHtml("nav", "div", "BtnNavMain", "fixed z-100 flex bg-base-100 pl-3 pr-3 pb-14 items-center gap-x-14 place-content-center", "");
 fmtHtml("BtnNavMain", "div", "BtnNav", "mt-2", "");
 
 flxHtml(
@@ -235,11 +235,11 @@ fmtHtml(
   "rootSrc",
   "div",
   "rootSrcData",
-  "mt-40 ml-8 overflow-y-auto h-calc(100vh - 40px) w-60 text-pretty",
+  "mt-30 ml-8 scroll-smooth overflow-y-auto w-60 text-pretty",
   rootSideData
 );
-fmtHtml("rootSrc", "div", "rootSide", "fixed top-20 right-2 z-101", "");
-fmtHtml("rootSide", "div", "rootSideIcon", " drawer drawer-end", rootSideIcon);
+fmtHtml("rootSrc", "div", "rootSide", "fixed top-22 right-2 z-101", "");
+fmtHtml("rootSide", "div", "rootSideIcon", "drawer drawer-end", rootSideIcon);
 
 
 // Lil' sources..
