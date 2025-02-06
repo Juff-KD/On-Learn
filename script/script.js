@@ -171,7 +171,7 @@ function sngHtml(a, tagName, [Params], CLASS) {
 
 //-----------------------------+++++++-----------------------------------------//
 //html..
-fmtHtml("nav", "div", "BtnNavMain", "fixed z-100 flex bg-base-100 pl-3 pr-3 pb-20 items-center ml-11 gap-x-16 place-content-center", "");
+fmtHtml("nav", "div", "BtnNavMain", "fixed z-100 flex bg-base-100 ml-8 pl-3 pr-3 pb-20 items-center gap-x-14 place-content-center", "");
 fmtHtml("BtnNavMain", "div", "BtnNav", "mt-2", "");
 
 flxHtml(
@@ -230,22 +230,28 @@ flxHtml(
 fmtHtml("root", "div", "rootMain", "flex flex-col", "");
 
 fmtHtml("rootMain", "div", "rootContainer1", "", ""); //:TODO: rootContainer1, rootContainer2.. for other data sources..
-fmtHtml("rootContainer1", "div", "rootSrc", " overflow-y-hidden", "");
-fmtHtml("rootSrc", "div", "rootSrcData", "mt-40 overflow-y-auto h-calc(100vh - 40px) w-56 text-pretty place-self-center", rootSideData);
-fmtHtml("rootSrc", "div", "rootSide", "fixed top-20 right-11 z-101", "");
+fmtHtml("rootContainer1", "div", "rootSrc", "", "");
+fmtHtml(
+  "rootSrc",
+  "div",
+  "rootSrcData",
+  "mt-40 overflow-y-auto h-calc(100vh - 40px) w-60 text-pretty place-self-center",
+  rootSideData
+);
+fmtHtml("rootSrc", "div", "rootSide", "fixed top-20 right-13 z-101", "");
 fmtHtml("rootSide", "div", "rootSideIcon", " drawer drawer-end", rootSideIcon);
 
 
 // Lil' sources..
 fmtHtml("rootMain", "div", "rootContainer2", "mt-28 grid place-content-center gap-4 text-2xl", ""); //:TODO: rootContainer1, rootContainer2.. for other data sources..
-fmtHtml("rootContainer2", "h1", "titlRoot", "font-mono place-self-center", "Little Sources");
+fmtHtml("rootContainer2", "h1", "titlRoot", "font-mono place-self-center z-101", "Little Sources");
 fmtHtml("rootContainer2", "div", "rootNav", "navbar bg-base-100", "");
 fmtHtml("rootNav", "div", "rootNavTitle", "", rootNavTitle);
 
 // fmtHtml("forLists", "li", "nav-other", "", "other");
 
 fmtHtml("rootMain", "div", "rootContainer3", "", ""); //:TODO: rootContainer1, rootContainer2.. for other data sources..
-fmtHtml("rootContainer3", "div", "searchExpand", "mt-20", searchExpand);
+fmtHtml("rootContainer3", "div", "searchExpand", "mt-40", searchExpand);
 fmtHtml("rootContainer3", "div", "searchResult", "", "");
 
 const dataKeys = [
