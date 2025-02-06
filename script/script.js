@@ -48,7 +48,7 @@ const rootSideIcon = `
 `;
 
 const rootSideData = `
-<article id="intro" class="scroll-mt-40">
+<article id="intro" class="scroll-mt-30">
             <h2>Section 1</h2>
             <p>This is the content of section 1.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
