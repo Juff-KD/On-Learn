@@ -89,7 +89,7 @@ const ProfileAvatar = `<div class="avatar online placeholder">
 // const searchSvg2 = '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 20 20" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>';
 const searchSvg = '<svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M6.13232 7C6.13232 7.41421 5.79654 7.75 5.38232 7.75L3.26468 7.75C2.85046 7.75 2.51468 7.41421 2.51468 7C2.51468 6.58579 2.85046 6.25 3.26468 6.25L5.38232 6.25C5.79654 6.25 6.13232 6.58579 6.13232 7Z" fill="#00cdb8" fill-rule="evenodd"/><path clip-rule="evenodd" d="M21.4851 7C21.4851 7.41421 21.1493 7.75 20.7351 7.75L13.3233 7.75C12.9091 7.75 12.5733 7.41421 12.5733 7C12.5733 6.58578 12.9091 6.25 13.3233 6.25L20.7351 6.25C21.1493 6.25 21.4851 6.58579 21.4851 7Z" fill="#00cdb8" fill-rule="evenodd"/><path d="M4.85278 7C4.85278 5.60218 4.85278 4.90326 5.08114 4.35195C5.38563 3.61687 5.96965 3.03284 6.70473 2.72836C7.25605 2.5 7.95496 2.5 9.35278 2.5V2.5C10.7506 2.5 11.4495 2.5 12.0008 2.72836C12.7359 3.03284 13.3199 3.61687 13.6244 4.35195C13.8528 4.90326 13.8528 5.60218 13.8528 7V7C13.8528 8.39782 13.8528 9.09674 13.6244 9.64805C13.3199 10.3831 12.7359 10.9672 12.0008 11.2716C11.4495 11.5 10.7506 11.5 9.35278 11.5V11.5C7.95496 11.5 7.25605 11.5 6.70473 11.2716C5.96965 10.9672 5.38563 10.3831 5.08114 9.64805C4.85278 9.09674 4.85278 8.39782 4.85278 7V7Z" fill="#00cdb8"/><path clip-rule="evenodd" d="M17.8674 18C17.8674 17.5858 18.2032 17.25 18.6174 17.25L20.7351 17.25C21.1493 17.25 21.4851 17.5858 21.4851 18C21.4851 18.4142 21.1493 18.75 20.7351 18.75L18.6174 18.75C18.2032 18.75 17.8674 18.4142 17.8674 18Z" fill="#00cdb8" fill-rule="evenodd"/><path clip-rule="evenodd" d="M2.51465 18C2.51465 17.5858 2.85044 17.25 3.26465 17.25L10.6764 17.25C11.0906 17.25 11.4264 17.5858 11.4264 18C11.4264 18.4142 11.0906 18.75 10.6764 18.75L3.26465 18.75C2.85043 18.75 2.51465 18.4142 2.51465 18Z" fill="#00cdb8" fill-rule="evenodd"/><path d="M19.147 18C19.147 19.3978 19.147 20.0967 18.9186 20.6481C18.6141 21.3831 18.0301 21.9672 17.295 22.2716C16.7437 22.5 16.0448 22.5 14.647 22.5V22.5C13.2491 22.5 12.5502 22.5 11.9989 22.2716C11.2638 21.9672 10.6798 21.3831 10.3753 20.648C10.147 20.0967 10.147 19.3978 10.147 18V18C10.147 16.6022 10.147 15.9033 10.3753 15.3519C10.6798 14.6169 11.2638 14.0328 11.9989 13.7284C12.5502 13.5 13.2491 13.5 14.647 13.5V13.5C16.0448 13.5 16.7437 13.5 17.295 13.7284C18.0301 14.0328 18.6141 14.6169 18.9186 15.3519C19.147 15.9033 19.147 16.6022 19.147 18V18Z" fill="#00cdb8"/></svg>';
 const searchExpand = `</label>
-<label class="input input-sm input-bordered flex items-center gap-2 w-76 place-self-center">
+<label class="input input-sm input-bordered flex items-center gap-2 w-76">
   <input type="text" class="grow" placeholder="Search" />
   <kbd class="kbd kbd-sm">⌘</kbd>
   <kbd class="kbd kbd-sm">K</kbd>
@@ -186,7 +186,7 @@ fmtHtml(
   "BtnNavMain",
   "span",
   "BtnMenu",
-  "flex gap-x-3 items-center place-self-end mt-2 ml-26",
+  "flex gap-x-3 items-center place-self-end mt-2 ml-14",
   ""
 );
 
@@ -235,10 +235,10 @@ fmtHtml(
   "rootSrc",
   "div",
   "rootSrcData",
-  "mt-40 overflow-y-auto h-calc(100vh - 40px) w-60 text-pretty place-self-center",
+  "mt-40 ml-8 overflow-y-auto h-calc(100vh - 40px) w-60 text-pretty",
   rootSideData
 );
-fmtHtml("rootSrc", "div", "rootSide", "fixed top-20 right-3 z-101", "");
+fmtHtml("rootSrc", "div", "rootSide", "fixed top-20 right-2 z-101", "");
 fmtHtml("rootSide", "div", "rootSideIcon", " drawer drawer-end", rootSideIcon);
 
 
@@ -251,8 +251,8 @@ fmtHtml("rootNav", "div", "rootNavTitle", "", rootNavTitle);
 // fmtHtml("forLists", "li", "nav-other", "", "other");
 
 fmtHtml("rootMain", "div", "rootContainer3", "", ""); //:TODO: rootContainer1, rootContainer2.. for other data sources..
-fmtHtml("rootContainer3", "div", "searchExpand", "mt-40", searchExpand);
-fmtHtml("rootContainer3", "div", "searchResult", "", "");
+fmtHtml("rootContainer3", "div", "searchExpand", "mt-40 ml-7 place-self-center", searchExpand);
+fmtHtml("rootContainer3", "div", "searchResult", "ml-8", "");
 
 const dataKeys = [
   "Apple",
