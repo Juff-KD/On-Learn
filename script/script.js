@@ -171,7 +171,7 @@ function sngHtml(a, tagName, [Params], CLASS) {
 
 //-----------------------------+++++++-----------------------------------------//
 //html..
-fmtHtml("nav", "div", "BtnNavMain", "fixed z-100 flex bg-base-100 ml-8 pl-3 pr-3 pb-20 items-center gap-x-14 place-content-center", "");
+fmtHtml("nav", "div", "BtnNavMain", "fixed z-100 flex bg-base-100 pl-3 pr-3 pb-20 items-center gap-x-14 place-content-center", "");
 fmtHtml("BtnNavMain", "div", "BtnNav", "mt-2", "");
 
 flxHtml(
@@ -186,7 +186,7 @@ fmtHtml(
   "BtnNavMain",
   "span",
   "BtnMenu",
-  "flex gap-x-3 items-center place-self-end mt-2 ml-8",
+  "flex gap-x-3 items-center place-self-end mt-2 ml-26",
   ""
 );
 
@@ -238,7 +238,7 @@ fmtHtml(
   "mt-40 overflow-y-auto h-calc(100vh - 40px) w-60 text-pretty place-self-center",
   rootSideData
 );
-fmtHtml("rootSrc", "div", "rootSide", "fixed top-20 right-13 z-101", "");
+fmtHtml("rootSrc", "div", "rootSide", "fixed top-20 right-3 z-101", "");
 fmtHtml("rootSide", "div", "rootSideIcon", " drawer drawer-end", rootSideIcon);
 
 
