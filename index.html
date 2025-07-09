@@ -18,30 +18,18 @@
     <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/expand.min.css">
 
-    <!-- 5. Inline Styles -->
-    <style type="text/tailwindcss">
-        @theme {
-      --color-clifford: #da373d;
-    }
-  </style>
-
-    <!-- 6. External Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/showdown@2.0.0/dist/showdown.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Markdown-Tag/markdown-tag-GitHub.js" defer></script>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <!-- 7. Title Tag -->
     <title>On Learn</title>
 </head>
 
 <body class="h-screen m-0">
     <nav id="nav">
-        <div id="BtnNavMain" ,
+        <div id="BtnNavMain"
             class="fixed z-100 flex bg-base-100 pl-3 pr-3 pb-14 items-center gap-x-14 place-content-center">
-            <div id="BtnSearch" , calss="mt-2">
-                <button data-target="rootContainer3" class="btn btn-md btn-ghost">
+            <div  class="mt-2">
+                <button id="BtnSearch" data-target="rootContainer3" class="btn btn-md btn-ghost">
                     <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path clip-rule="evenodd"
                             d="M6.13232 7C6.13232 7.41421 5.79654 7.75 5.38232 7.75L3.26468 7.75C2.85046 7.75 2.51468 7.41421 2.51468 7C2.51468 6.58579 2.85046 6.25 3.26468 6.25L5.38232 6.25C5.79654 6.25 6.13232 6.58579 6.13232 7Z"
@@ -64,8 +52,8 @@
                     </svg>
                 </button>
             </div>
-            <div id="BtnMenu" class="flex gap-x-3 items-center place-self-end mt-2 ml-14">
-                <button data-target="rootContainer2" class="btn btn-sm btn-accent">Lil' Src</button>
+            <div  class="flex gap-x-3 items-center place-self-end mt-2 ml-14">
+                <button id="BtnMenu" data-target="rootContainer2" class="btn btn-sm btn-accent">Lil' Src</button>
                 <!--NOTE: button change-->
                 <button id="BtnThemeChange">
                     <label class="theme-toggle" title="Toggle theme">
@@ -84,7 +72,7 @@
                         </svg>
                     </label>
                 </button>
-                <button id="Profile">
+                <button id="Profile" data-target="rootContainer1">
                     <div class="avatar online placeholder">
                         <div class="bg-neutral text-neutral-content w-11 rounded-full">
                             <span class="text-xl">AI</span>
@@ -95,7 +83,7 @@
         </div>
     </nav>
     <div id="root">
-        <div id="rootMain" class="flex felx-col">
+        <div id="rootMain" class="flex flex-col">
             <div id="rootContainer1">
                 <div id="rootSrc">
                     <div id="rootSide" class="fixed top-22 right-2 z-101">
@@ -214,7 +202,6 @@
             </div>
             <div id="rootContainer3">
                 <div id="searchExpand" class="mt-40 ml-7 place-self-center">
-                    </label>
                     <label class="input input-sm input-bordered flex items-center gap-2 w-76">
                         <input type="text" class="grow" placeholder="Search" />
                         <kbd class="kbd kbd-sm">⌘</kbd>
@@ -229,6 +216,28 @@
 </body>
 
 <script src="script/script.js"></script>
+<!-- <script> -->
+<!-- // Your inline JavaScript for BtnMenu should go here, in its own script block. -->
+<!-- const BtnTest = document.getElementById('BtnMenu'); -->
+<!---->
+<!-- if (BtnTest) { // Always a good idea to check if the element exists -->
+<!--     BtnTest.addEventListener('click', function() { -->
+<!--         let targetContainer = document.getElementById("rootContainer2"); -->
+<!--         if (targetContainer) { // Check if target container exists -->
+<!--             // Correct way to set a hidden attribute or change display -->
+<!--             // Using .style.display = 'none'; is more common for hiding/showing elements for this pattern. -->
+<!--             // setAttribute('hidden', '') or .hidden = true is also valid if you prefer HTML 'hidden' attribute. -->
+<!--             targetContainer.style.display = 'none'; -->
+<!--             console.log("BtnMenu clicked! rootContainer2 should be hidden."); // For debugging -->
+<!--         } else { -->
+<!--             console.error("Target container 'rootContainer2' not found."); -->
+<!--         } -->
+<!--     }); -->
+<!-- } else { -->
+<!--     console.warn("Button with ID 'BtnMenu' not found."); -->
+<!-- } -->
+<!-- </script> -->
 <!-- <script src="script/theme.js?v=1.0.0"></script> -->
 
 </html>
+

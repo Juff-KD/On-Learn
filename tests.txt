@@ -1,3 +1,84 @@
+
+
+    <!-- 5. Inline Styles -->
+  <!--   <style type="text/tailwindcss"> -->
+  <!--       @theme { -->
+  <!--     --color-clifford: #da373d; -->
+  <!--   } -->
+  <!-- </style> -->
+
+    <!-- 6. External Scripts -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/showdown@2.0.0/dist/showdown.min.js" defer></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Markdown-Tag/markdown-tag-GitHub.js" defer></script> -->
+    <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
+
+// Initialize default page display
+// function initializeDefaultPage() {
+//     // Hide all containers initially
+//     const allContainers = document.querySelectorAll('[id^="rootContainer"]');
+//     allContainers.forEach(container => {
+//         container.style.display = 'none';
+//     });
+
+//     // Show rootContainer1 as default
+//     const defaultContainer = document.getElementById('rootContainer1');
+//     if (defaultContainer) {
+//         defaultContainer.style.display = 'block';
+//     }
+// }
+
+// Call initialization when DOM is loaded
+// document.addEventListener('DOMContentLoaded', initializeDefaultPage);
+
+//-------------------------------+++++++++++++---------------------------------//
+// Workspace Handle Seg..
+// jQuery.noConflict();
+
+// jQuery(document).ready(function ($) {
+//   // You can use the locally-scoped $ in here as an alias to jQuery.
+//   $("div").hide();
+// });
+
+//ready function
+// function readyDoc($) {
+//     $('[id^="rootContainer"]').hide();
+//     $('#rootContainer1').show();
+//     // Add click event listeners to buttons
+//     // $('#rootContainer1').show();
+//     $('button[data-target]').click(function() {
+//         const targetId = $(this).attr('data-target'); // Get the target content ID
+//         $('[id^="rootContainer"]').hide(); // Hide all content sections
+//         // $('#rootContainer1').hide();
+//         $(`#${targetId}`).show(); // Show the target content section
+//         // $('[id^="rootContainer"]').toggle();
+//     });
+
+//-----------------##########-------------------
+// let isProfileVisible = false;
+//
+// $("#BtnSrc").click(function () {
+//   if (isProfileVisible) {
+//     $("#rootNav").show();
+//     $("#profile").hide();
+//   } else {
+//     $("#rootNav").hide();
+//     $("#profile").show();
+//   }
+//   isProfileVisible = !isProfileVisible;
+//   // Code to run when the document is ready.
+// });
+// }
+
+// jQuery(document).ready(readyDoc);
+// or:
+// $(window).on("load", readyDoc);
+// handle btn
+
+
+
+
+
+
 -- sidenav
 <div class="flex h-screen flex-col justify-between border-e bg-white">
   <div class="px-4 py-6">
