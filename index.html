@@ -1,243 +1,384 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
 
 <head>
-    <!-- 1. Charset Declaration -->
-    <meta charset="UTF-8" />
+	<!-- 1. Charset Declaration -->
+	<meta charset="UTF-8" />
 
-    <!-- 2. Viewport Meta Tag -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- 2. Viewport Meta Tag -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- 3. Metadata (SEO) -->
-    <meta name="description" content="Free Learn" />
-    <meta name="keywords" content="HTML, CSS, JavaScript" />
-    <meta name="author" content="Juff" />
+	<!-- 3. Metadata (SEO) -->
+	<meta name="description" content="Free Learn" />
+	<meta name="keywords" content="HTML, CSS, JavaScript" />
+	<meta name="author" content="Juff" />
 
-    <!-- 4. External Stylesheets -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/expand.min.css">
+	<!-- 4. External Stylesheets -->
+	<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+	<link href="https://cdn.tailwindcss.com" rel="stylesheet" type="text/javascript" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/expand.min.css" />
 
-    <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <!-- 7. Title Tag -->
-    <title>On Learn</title>
+	<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+	<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+	<!-- 7. Title Tag -->
+	<title>On Learn</title>
 </head>
 
 <body class="h-screen m-0">
-    <nav id="nav">
-        <div id="BtnNavMain"
-            class="fixed z-100 flex bg-base-100 pl-3 pr-3 pb-14 items-center gap-x-14 place-content-center">
-            <div  class="mt-2">
-                <button id="BtnSearch" data-target="rootContainer3" class="btn btn-md btn-ghost">
-                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path clip-rule="evenodd"
-                            d="M6.13232 7C6.13232 7.41421 5.79654 7.75 5.38232 7.75L3.26468 7.75C2.85046 7.75 2.51468 7.41421 2.51468 7C2.51468 6.58579 2.85046 6.25 3.26468 6.25L5.38232 6.25C5.79654 6.25 6.13232 6.58579 6.13232 7Z"
-                            fill="#00cdb8" fill-rule="evenodd" />
-                        <path clip-rule="evenodd"
-                            d="M21.4851 7C21.4851 7.41421 21.1493 7.75 20.7351 7.75L13.3233 7.75C12.9091 7.75 12.5733 7.41421 12.5733 7C12.5733 6.58578 12.9091 6.25 13.3233 6.25L20.7351 6.25C21.1493 6.25 21.4851 6.58579 21.4851 7Z"
-                            fill="#00cdb8" fill-rule="evenodd" />
-                        <path
-                            d="M4.85278 7C4.85278 5.60218 4.85278 4.90326 5.08114 4.35195C5.38563 3.61687 5.96965 3.03284 6.70473 2.72836C7.25605 2.5 7.95496 2.5 9.35278 2.5V2.5C10.7506 2.5 11.4495 2.5 12.0008 2.72836C12.7359 3.03284 13.3199 3.61687 13.6244 4.35195C13.8528 4.90326 13.8528 5.60218 13.8528 7V7C13.8528 8.39782 13.8528 9.09674 13.6244 9.64805C13.3199 10.3831 12.7359 10.9672 12.0008 11.2716C11.4495 11.5 10.7506 11.5 9.35278 11.5V11.5C7.95496 11.5 7.25605 11.5 6.70473 11.2716C5.96965 10.9672 5.38563 10.3831 5.08114 9.64805C4.85278 9.09674 4.85278 8.39782 4.85278 7V7Z"
-                            fill="#00cdb8" />
-                        <path clip-rule="evenodd"
-                            d="M17.8674 18C17.8674 17.5858 18.2032 17.25 18.6174 17.25L20.7351 17.25C21.1493 17.25 21.4851 17.5858 21.4851 18C21.4851 18.4142 21.1493 18.75 20.7351 18.75L18.6174 18.75C18.2032 18.75 17.8674 18.4142 17.8674 18Z"
-                            fill="#00cdb8" fill-rule="evenodd" />
-                        <path clip-rule="evenodd"
-                            d="M2.51465 18C2.51465 17.5858 2.85044 17.25 3.26465 17.25L10.6764 17.25C11.0906 17.25 11.4264 17.5858 11.4264 18C11.4264 18.4142 11.0906 18.75 10.6764 18.75L3.26465 18.75C2.85043 18.75 2.51465 18.4142 2.51465 18Z"
-                            fill="#00cdb8" fill-rule="evenodd" />
-                        <path
-                            d="M19.147 18C19.147 19.3978 19.147 20.0967 18.9186 20.6481C18.6141 21.3831 18.0301 21.9672 17.295 22.2716C16.7437 22.5 16.0448 22.5 14.647 22.5V22.5C13.2491 22.5 12.5502 22.5 11.9989 22.2716C11.2638 21.9672 10.6798 21.3831 10.3753 20.648C10.147 20.0967 10.147 19.3978 10.147 18V18C10.147 16.6022 10.147 15.9033 10.3753 15.3519C10.6798 14.6169 11.2638 14.0328 11.9989 13.7284C12.5502 13.5 13.2491 13.5 14.647 13.5V13.5C16.0448 13.5 16.7437 13.5 17.295 13.7284C18.0301 14.0328 18.6141 14.6169 18.9186 15.3519C19.147 15.9033 19.147 16.6022 19.147 18V18Z"
-                            fill="#00cdb8" />
-                    </svg>
-                </button>
-            </div>
-            <div  class="flex gap-x-3 items-center place-self-end mt-2 ml-14">
-                <button id="BtnMenu" data-target="rootContainer2" class="btn btn-sm btn-accent">Lil' Src</button>
-                <!--NOTE: button change-->
-                <button id="BtnThemeChange">
-                    <label class="theme-toggle" title="Toggle theme">
-                        <input type="checkbox" class="theme-controller" value="light">
-                        <span class="theme-toggle-sr">Toggle theme</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="1.8em" height="1.8em"
-                            fill="currentColor" class="theme-toggle__expand" viewBox="0 0 32 32">
-                            <clipPath id="theme-toggle__expand__cutout">
-                                <path d="M0-11h25a1 1 0 0017 13v30H0Z" />
-                            </clipPath>
-                            <g clip-path="url(#theme-toggle__expand__cutout)">
-                                <circle cx="16" cy="16" r="8.4" />
-                                <path
-                                    d="M18.3 3.2c0 1.3-1 2.3-2.3 2.3s-2.3-1-2.3-2.3S14.7.9 16 .9s2.3 1 2.3 2.3zm-4.6 25.6c0-1.3 1-2.3 2.3-2.3s2.3 1 2.3 2.3-1 2.3-2.3 2.3-2.3-1-2.3-2.3zm15.1-10.5c-1.3 0-2.3-1-2.3-2.3s1-2.3 2.3-2.3 2.3 1 2.3 2.3-1 2.3-2.3 2.3zM3.2 13.7c1.3 0 2.3 1 2.3 2.3s-1 2.3-2.3 2.3S.9 17.3.9 16s1-2.3 2.3-2.3zm5.8-7C9 7.9 7.9 9 6.7 9S4.4 8 4.4 6.7s1-2.3 2.3-2.3S9 5.4 9 6.7zm16.3 21c-1.3 0-2.3-1-2.3-2.3s1-2.3 2.3-2.3 2.3 1 2.3 2.3-1 2.3-2.3 2.3zm2.4-21c0 1.3-1 2.3-2.3 2.3S23 7.9 23 6.7s1-2.3 2.3-2.3 2.4 1 2.4 2.3zM6.7 23C8 23 9 24 9 25.3s-1 2.3-2.3 2.3-2.3-1-2.3-2.3 1-2.3 2.3-2.3z" />
-                            </g>
-                        </svg>
-                    </label>
-                </button>
-                <button id="Profile" data-target="rootContainer1">
-                    <div class="avatar online placeholder">
-                        <div class="bg-neutral text-neutral-content w-11 rounded-full">
-                            <span class="text-xl">AI</span>
-                        </div>
-                    </div>
-                </button>
-            </div>
-        </div>
-    </nav>
-    <div id="root">
-        <div id="rootMain" class="flex flex-col">
-            <div id="rootContainer1">
-                <div id="rootSrc">
-                    <div id="rootSide" class="fixed top-22 right-2 z-101">
-                        <div id="rootSideIcon" class="drawer drawer-end">
-                            <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
-                            <div class="drawer-content ">
-                                <label for="my-drawer-4" class="drawer-button btn btn-sm btn-neutral">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="#f5f5f5" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-                                        <line x1="9" y1="3" x2="9" y2="21" />
-                                        <path d="M17 16l-4-4 4-4" />
-                                    </svg>
-                                </label>
-                            </div>
+	<nav id="nav" class="fixed z-12">
+		<div id="BtnNavMain"
+			class="flex z-12 flex bg-base-100 pl-3 pr-3 pb-14 items-center gap-x-14 place-content-center sm:flex-row">
+			<div class="mt-2">
+				<button id="BtnSearch" data-target="rootContainer3" class="btn btn-md btn-ghost">
+					<svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path clip-rule="evenodd"
+							d="M6.13232 7C6.13232 7.41421 5.79654 7.75 5.38232 7.75L3.26468 7.75C2.85046 7.75 2.51468 7.41421 2.51468 7C2.51468 6.58579 2.85046 6.25 3.26468 6.25L5.38232 6.25C5.79654 6.25 6.13232 6.58579 6.13232 7Z"
+							fill="#00cdb8" fill-rule="evenodd" />
+						<path clip-rule="evenodd"
+							d="M21.4851 7C21.4851 7.41421 21.1493 7.75 20.7351 7.75L13.3233 7.75C12.9091 7.75 12.5733 7.41421 12.5733 7C12.5733 6.58578 12.9091 6.25 13.3233 6.25L20.7351 6.25C21.1493 6.25 21.4851 6.58579 21.4851 7Z"
+							fill="#00cdb8" fill-rule="evenodd" />
+						<path
+							d="M4.85278 7C4.85278 5.60218 4.85278 4.90326 5.08114 4.35195C5.38563 3.61687 5.96965 3.03284 6.70473 2.72836C7.25605 2.5 7.95496 2.5 9.35278 2.5V2.5C10.7506 2.5 11.4495 2.5 12.0008 2.72836C12.7359 3.03284 13.3199 3.61687 13.6244 4.35195C13.8528 4.90326 13.8528 5.60218 13.8528 7V7C13.8528 8.39782 13.8528 9.09674 13.6244 9.64805C13.3199 10.3831 12.7359 10.9672 12.0008 11.2716C11.4495 11.5 10.7506 11.5 9.35278 11.5V11.5C7.95496 11.5 7.25605 11.5 6.70473 11.2716C5.96965 10.9672 5.38563 10.3831 5.08114 9.64805C4.85278 9.09674 4.85278 8.39782 4.85278 7V7Z"
+							fill="#00cdb8" />
+						<path clip-rule="evenodd"
+							d="M17.8674 18C17.8674 17.5858 18.2032 17.25 18.6174 17.25L20.7351 17.25C21.1493 17.25 21.4851 17.5858 21.4851 18C21.4851 18.4142 21.1493 18.75 20.7351 18.75L18.6174 18.75C18.2032 18.75 17.8674 18.4142 17.8674 18Z"
+							fill="#00cdb8" fill-rule="evenodd" />
+						<path clip-rule="evenodd"
+							d="M2.51465 18C2.51465 17.5858 2.85044 17.25 3.26465 17.25L10.6764 17.25C11.0906 17.25 11.4264 17.5858 11.4264 18C11.4264 18.4142 11.0906 18.75 10.6764 18.75L3.26465 18.75C2.85043 18.75 2.51465 18.4142 2.51465 18Z"
+							fill="#00cdb8" fill-rule="evenodd" />
+						<path
+							d="M19.147 18C19.147 19.3978 19.147 20.0967 18.9186 20.6481C18.6141 21.3831 18.0301 21.9672 17.295 22.2716C16.7437 22.5 16.0448 22.5 14.647 22.5V22.5C13.2491 22.5 12.5502 22.5 11.9989 22.2716C11.2638 21.9672 10.6798 21.3831 10.3753 20.648C10.147 20.0967 10.147 19.3978 10.147 18V18C10.147 16.6022 10.147 15.9033 10.3753 15.3519C10.6798 14.6169 11.2638 14.0328 11.9989 13.7284C12.5502 13.5 13.2491 13.5 14.647 13.5V13.5C16.0448 13.5 16.7437 13.5 17.295 13.7284C18.0301 14.0328 18.6141 14.6169 18.9186 15.3519C19.147 15.9033 19.147 16.6022 19.147 18V18Z"
+							fill="#00cdb8" />
+					</svg>
+				</button>
+			</div>
+			<div class="flex gap-x-3 items-center place-self-end mt-2 ml-14 sm:ml-84">
+				<button id="BtnMenu" data-target="rootContainer2" class="btn btn-sm btn-accent">
+					Lil' Src
+				</button>
+				<!--NOTE: button change-->
+				<button id="BtnThemeChange">
+					<label class="theme-toggle" title="Toggle theme">
+						<input type="checkbox" class="theme-controller" value="valentine" />
+						<span class="theme-toggle-sr">Toggle theme</span>
+						<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="1.8em" height="1.8em"
+							fill="currentColor" class="theme-toggle__expand" viewBox="0 0 32 32">
+							<clipPath id="theme-toggle__expand__cutout">
+								<path d="M0-11h25a1 1 0 0017 13v30H0Z" />
+							</clipPath>
+							<g clip-path="url(#theme-toggle__expand__cutout)">
+								<circle cx="16" cy="16" r="8.4" />
+								<path
+									d="M18.3 3.2c0 1.3-1 2.3-2.3 2.3s-2.3-1-2.3-2.3S14.7.9 16 .9s2.3 1 2.3 2.3zm-4.6 25.6c0-1.3 1-2.3 2.3-2.3s2.3 1 2.3 2.3-1 2.3-2.3 2.3-2.3-1-2.3-2.3zm15.1-10.5c-1.3 0-2.3-1-2.3-2.3s1-2.3 2.3-2.3 2.3 1 2.3 2.3-1 2.3-2.3 2.3zM3.2 13.7c1.3 0 2.3 1 2.3 2.3s-1 2.3-2.3 2.3S.9 17.3.9 16s1-2.3 2.3-2.3zm5.8-7C9 7.9 7.9 9 6.7 9S4.4 8 4.4 6.7s1-2.3 2.3-2.3S9 5.4 9 6.7zm16.3 21c-1.3 0-2.3-1-2.3-2.3s1-2.3 2.3-2.3 2.3 1 2.3 2.3-1 2.3-2.3 2.3zm2.4-21c0 1.3-1 2.3-2.3 2.3S23 7.9 23 6.7s1-2.3 2.3-2.3 2.4 1 2.4 2.3zM6.7 23C8 23 9 24 9 25.3s-1 2.3-2.3 2.3-2.3-1-2.3-2.3 1-2.3 2.3-2.3z" />
+							</g>
+						</svg>
+					</label>
+				</button>
+				<button id="Profile" data-target="rootContainer1">
+					<div class="avatar online placeholder">
+						<div class="bg-neutral text-neutral-content w-11 rounded-full">
+							<span class="text-xl">AI</span>
+						</div>
+					</div>
+				</button>
+			</div>
+		</div>
+	</nav>
+	<div id="root">
+		<div id="rootMain" class="flex flex-col">
+			<div id="rootContainer1">
+				<div id="rootSrc">
+					<div id="rootSide" class="fixed top-22 right-2 z-101">
+						<div id="rootSideIcon" class="drawer drawer-end">
+							<input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+							<div class="drawer-content">
+								<label for="my-drawer-4" class="drawer-button btn btn-sm btn-neutral">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+										fill="none" stroke="#f5f5f5" stroke-width="2" stroke-linecap="round"
+										stroke-linejoin="round">
+										<rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+										<line x1="9" y1="3" x2="9" y2="21" />
+										<path d="M17 16l-4-4 4-4" />
+									</svg>
+								</label>
+							</div>
 
-                            <div class="drawer-side mt-20">
-                                <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
-                                <ul class="menu bg-base-100 text-base-content min-h-full w-56">
-                                    <li><a href="#intro">Introduction</a></li>
-                                    <li>
-                                        <a href="#learnDir">On Learn Directory</a>
-                                        <ul>
-                                            <li><a href="#sectionLearnDirSub1">Learning Preferences</a></li>
-                                            <li><a href="#sectionLearnDirSub2">Deep Learning</a></li>
-                                            <li>
-                                                <a href="#computerTerms">Computer Terms</a>
-                                                <ul>
-                                                    <li><a href="#sectionTermSub1">Standard Computer Terms</a></li>
-                                                    <li><a href="#sectionTermSub2">Special Computer Terms</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#highlightLearn">On Learn Highlights</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="rootSideData" class="mt-30 ml-8 scroll-smooth overflow-y-auto w-48 text-pretty">
-                        <article id="intro" class="scroll-mt-30">
-                            <h2>Section 1</h2>
-                            <p>This is the content of section 1.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
-                                ut labore et
-                                dolore magna aliqua.</p>
-                        </article>
-                        <article id="learnDir">
-                            <h2>Section 2</h2>
-                            <p>This is the content of section 2.</p>
-                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo
-                                consequat.</p>
-                        </article>
-                        <article id="sectionLearnDirSub1">
-                            <h2>Section 3</h2>
-                            <p>This is the content of section 3.</p>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                nulla pariatur.
-                            </p>
-                        </article>
-                        <article id="sectionLearnDirSub2">
-                            <h2>Section 4</h2>
-                            <p>This is the content of section 4.</p>
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                                anim id est
-                                laborum.</p>
-                        </article>
-                        <article id="computerTerms">
-                            <h2>Section 5</h2>
-                            <p>This is the content of section 5.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
-                                ut labore et
-                                dolore magna aliqua.</p>
-                        </article>
-                        <article id="sectionTermSub1">
-                            <h2>Section 6</h2>
-                            <p>This is the content of section 6.</p>
-                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo
-                                consequat.</p>
-                        </article>
-                        <article id="highlightLearn">
-                            <h2>Section 7</h2>
-                            <p>This is the content of section 6.</p>
-                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo
-                                consequat.</p>
-                        </article>
-                    </div>
-                </div>
-            </div>
-            <div id="rootContainer2" class="flex flex-col items-center mt-28 ml-5 gap-4 text-2xl">
-                <h1 id="titleRoot" class="font-mono z-101">Little Sources</h1>
-                <div id="rootNav" class="navbar bg-base-100">
-                    <div id="rootNavTitle">
-                        <ul
-                            class="menu menu-sm menu-horizontal place-content-center bg-base-200 rounded-box w-76 h-auto gap-4">
-                            <li><a>Ai</a></li>
-                            <li><a>Ui</a></li>
-                            <li><a>Colors</a></li>
-                            <li>
-                                <details>
-                                    <summary>Other</summary>
-                                    <ul class="p-2">
-                                        <li><a>Submenu 1</a></li>
-                                        <li><a>Submenu 2</a></li>
-                                    </ul>
-                                </details>
-                            </li>
-                        </ul>
+							<div class="drawer-side mt-20">
+								<label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
+								<ul class="menu bg-base-100 text-base-content min-h-full w-56">
+									<li>
+										<a href="#intro">Introduction</a>
+									</li>
+									<li>
+										<a href="#learnDir">On Learn Directory</a>
+										<ul>
+											<li>
+												<a href="#sectionLearnDirSub1">Learning Preferences</a>
+											</li>
+											<li>
+												<a href="#sectionLearnDirSub2">Deep Learning</a>
+											</li>
+											<li>
+												<a href="#computerTerms">Computer Terms</a>
+												<ul>
+													<li>
+														<a href="#sectionTermSub1">Standard
+															Computer
+															Terms</a>
+													</li>
+													<li>
+														<a href="#sectionTermSub2">Special
+															Computer
+															Terms</a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#highlightLearn">On Learn Highlights</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="rootSideData" class="mt-30 ml-8 scroll-smooth overflow-y-auto w-48 text-pretty">
+						<article id="intro" class="scroll-mt-30">
+							<h2>Section 1</h2>
+							<p>This is the content of section 1.</p>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit. Sed do eiusmod tempor
+								incididunt ut labore et dolore magna aliqua.
+							</p>
+						</article>
+						<article id="learnDir">
+							<h2>Section 2</h2>
+							<p>This is the content of section 2.</p>
+							<p>
+								Ut enim ad minim veniam, quis nostrud
+								exercitation ullamco laboris nisi ut aliquip
+								ex ea commodo consequat.
+							</p>
+						</article>
+						<article id="sectionLearnDirSub1">
+							<h2>Section 3</h2>
+							<p>This is the content of section 3.</p>
+							<p>
+								Duis aute irure dolor in reprehenderit in
+								voluptate velit esse cillum dolore eu fugiat
+								nulla pariatur.
+							</p>
+						</article>
+						<article id="sectionLearnDirSub2">
+							<h2>Section 4</h2>
+							<p>This is the content of section 4.</p>
+							<p>
+								Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt
+								mollit anim id est laborum.
+							</p>
+						</article>
+						<article id="computerTerms">
+							<h2>Section 5</h2>
+							<p>This is the content of section 5.</p>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit. Sed do eiusmod tempor
+								incididunt ut labore et dolore magna aliqua.
+							</p>
+						</article>
+						<article id="sectionTermSub1">
+							<h2>Section 6</h2>
+							<p>This is the content of section 6.</p>
+							<p>
+								Ut enim ad minim veniam, quis nostrud
+								exercitation ullamco laboris nisi ut aliquip
+								ex ea commodo consequat.
+							</p>
+						</article>
+						<article id="highlightLearn">
+							<h2>Section 7</h2>
+							<p>This is the content of section 6.</p>
+							<p>
+								Ut enim ad minim veniam, quis nostrud
+								exercitation ullamco laboris nisi ut aliquip
+								ex ea commodo consequat.
+							</p>
+						</article>
+					</div>
+				</div>
+			</div>
+			<div id="rootContainer2" class="flex flex-col mt-26 text-2xl items-center">
+				<div id="titleRoot" class="font-mono fixed ml-8 z-11 bg-base-100 pt-8 w-full h-auto sm:text-3xl">
+					<a>Little Sources</a>
+				</div>
+				<div id="rootNav" class="navbar bg-base-100 flex-col gap-10">
+					<div id="rootNavTitle" class="pt-18 fixed z-10 bg-base-100 pb-4">
+						<ul
+							class="menu menu-sm menu-horizontal place-content-center bg-base-200 rounded-box w-76 h-auto gap-4">
+							<li><button id="lilAi" data-target="lilAiData">Ai</button></li>
+							<li><button id="lilUi" data-target="lilUiData">Ui</button></li>
+							<li><button id="lilColors" data-target="lilColorsData">Colors</button></li>
+							<li>
+								<details>
+									<summary>Other</summary>
+									<ul class="p-2">
+										<li><button>Apps</button></li>
+										<li><button>Commands</button></li>
+									</ul>
+								</details>
+							</li>
+						</ul>
+					</div>
+					<div id="rootNavData" class="pt-33">
+						<!-- :NOTE: Lil ai data here-->
+						<article id="lilAiData" class="flex flex-col gap-10 scroll-smooth overflow-y-auto z-9">
+							<section id=" aicard1 scroll-mt-28">
+								<div class="card bg-primary text-primary-content w-76 h-56">
+									<div class="card-body">
+										<h2 class="card-title">Chat-GPT</h2>
+										<p class="text-sm">- Hey..gpt <br>- And starts the conversations..</p>
+										<div class="flex justify-end flex-row gap-16 items-center">
+											<div class="card-actions w-28 h-auto">
+												<button class=" btn">prompts</button>
+											</div>
+											<div class="card-actions w-28 h-auto">
+												<button class="btn">open-web</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+							<section id=" aicard2">
+								<div class="card bg-primary text-primary-content w-76 h-56 ">
+									<div class="card-body">
+										<h2 class="card-title">Gemini Flash 2.0</h2>
+										<p class="text-sm">- Hey..gemini <br>- And starts the conversations..</p>
+										<div class="flex justify-end flex-row gap-16 items-center">
+											<div class="card-actions w-28 h-auto">
+												<button class=" btn">prompts</button>
+											</div>
+											<div class="card-actions w-28 h-auto">
+												<button class="btn">open-web</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+							<section id=" aicard3">
+								<div class="card bg-primary text-primary-content w-76 h-56 ">
+									<div class="card-body">
+										<h2 class="card-title">Gemini Flash 2.0</h2>
+										<p class="text-sm">- Hey..gemini <br>- And starts the conversations..</p>
+										<div class="flex justify-end flex-row gap-16 items-center">
+											<div class="card-actions w-28 h-auto">
+												<button class=" btn">prompts</button>
+											</div>
+											<div class="card-actions w-28 h-auto">
+												<button class="btn">open-web</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</article>
+						<!-- :NOTE: Lil ui data here-->
+						<article id="lilUiData" class="flex flex-col gap-10">
+							<section id=" uicard1">
+								<div class="card bg-primary text-primary-content w-76 h-56 ">
+									<div class="card-body">
+										<h2 class="card-title">Daisy-Ui</h2>
+										<p class="text-sm">- Hey..gpt <br>- And starts the conversations..</p>
+										<div class="flex justify-end flex-row gap-16 items-center">
+											<div class="card-actions w-28 h-auto">
+												<button class=" btn">prompts</button>
+											</div>
+											<div class="card-actions w-28 h-auto">
+												<button class="btn">open-web</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+							<section id=" uicard2">
+								<div class="card bg-primary text-primary-content w-76 h-56 ">
+									<div class="card-body">
+										<h2 class="card-title">ShadCdn</h2>
+										<p class="text-sm">- Hey..gemini <br>- And starts the conversations..</p>
+										<div class="flex justify-end flex-row gap-16 items-center">
+											<div class="card-actions w-28 h-auto">
+												<button class=" btn">prompts</button>
+											</div>
+											<div class="card-actions w-28 h-auto">
+												<button class="btn">open-web</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</article>
+						<article id="lilColorsData" class="flex flex-col gap-10">
+							<section id="colorscard1">
+								<div class="card bg-primary text-primary-content w-76 h-56 ">
+									<div class="card-body">
+										<h2 class="card-title">Palette</h2>
+										<p class="text-sm">- Hey..gpt <br>- And starts the conversations..</p>
+										<div class="flex justify-end flex-row gap-16 items-center">
+											<div class="card-actions w-28 h-auto">
+												<button class=" btn">prompts</button>
+											</div>
+											<div class="card-actions w-28 h-auto">
+												<button class="btn">open-web</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+							<section id="colorscard2">
+								<div class="card bg-primary text-primary-content w-76 h-56 ">
+									<div class="card-body">
+										<h2 class="card-title">Sample_Color</h2>
+										<p class="text-sm">- Hey..gemini <br>- And starts the conversations..</p>
+										<div class="flex justify-end flex-row gap-16 items-center">
+											<div class="card-actions w-28 h-auto">
+												<button class=" btn">prompts</button>
+											</div>
+											<div class="card-actions w-28 h-auto">
+												<button class="btn">open-web</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</article>
+					</div>
 
-                    </div>
-                </div>
-            </div>
-            <div id="rootContainer3">
-                <div id="searchExpand" class="mt-40 ml-7 place-self-center">
-                    <label class="input input-sm input-bordered flex items-center gap-2 w-76">
-                        <input type="text" class="grow" placeholder="Search" />
-                        <kbd class="kbd kbd-sm">⌘</kbd>
-                        <kbd class="kbd kbd-sm">K</kbd>
-                    </label>
-                </div>
-                <div id="searchResult" class='ml-8'></div>
-            </div>
-        </div>
-    </div>
+				</div>
+			</div>
+			<div id="rootContainer3">
+				<div id="searchExpand" class="flex mt-30 ml-7 place-self-center sm:ml-17">
+					<label class="input input-sm input-bordered flex items-center gap-2 w-76 sm:w-128">
+						<input type="text" class="grow" placeholder="Search repo.." />
+						<!-- <kbd class="kbd kbd-sm">⌘</kbd> -->
+						<!-- <kbd class="kbd kbd-sm">K</kbd> -->
+						<label id="swapid" class="flex btn btn-xs btn-ghost swap swap-rotate">
+							<!-- <input id="swapChange" type="checkbox" /> -->
+							<svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="23" height="23"
+								viewBox="0 0 512 512">
+								<polygon
+									points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
+							</svg>
+						</label>
 
+					</label>
+				</div>
+				<div id="searchResult" class="ml-8 pt-4"></div>
+			</div>
+		</div>
+	</div>
 </body>
 
 <script src="script/script.js"></script>
-<!-- <script> -->
-<!-- // Your inline JavaScript for BtnMenu should go here, in its own script block. -->
-<!-- const BtnTest = document.getElementById('BtnMenu'); -->
-<!---->
-<!-- if (BtnTest) { // Always a good idea to check if the element exists -->
-<!--     BtnTest.addEventListener('click', function() { -->
-<!--         let targetContainer = document.getElementById("rootContainer2"); -->
-<!--         if (targetContainer) { // Check if target container exists -->
-<!--             // Correct way to set a hidden attribute or change display -->
-<!--             // Using .style.display = 'none'; is more common for hiding/showing elements for this pattern. -->
-<!--             // setAttribute('hidden', '') or .hidden = true is also valid if you prefer HTML 'hidden' attribute. -->
-<!--             targetContainer.style.display = 'none'; -->
-<!--             console.log("BtnMenu clicked! rootContainer2 should be hidden."); // For debugging -->
-<!--         } else { -->
-<!--             console.error("Target container 'rootContainer2' not found."); -->
-<!--         } -->
-<!--     }); -->
-<!-- } else { -->
-<!--     console.warn("Button with ID 'BtnMenu' not found."); -->
-<!-- } -->
-<!-- </script> -->
-<!-- <script src="script/theme.js?v=1.0.0"></script> -->
 
 </html>
-
