@@ -24,11 +24,10 @@
 	<title>On Learn</title>
 </head>
 
-<body class="h-screen m-0">
-	<nav id="nav" class="fixed z-12">
-		<div id="BtnNavMain"
-			class="flex z-12 flex bg-base-100 pl-3 pr-3 pb-14 items-center gap-x-14 place-content-center sm:flex-row">
-			<div class="mt-2">
+<body class=m-0 w-full">
+	<nav id="nav" class="fixed mx-auto w-full z-12 ">
+		<div id="BtnNavMain" class="flex relative bg-base-100 pb-28 items-center ">
+			<div class="flex fixed top-0 left-1 mt-2 col-start-1 col-end-2 ">
 				<button id="BtnSearch" data-target="rootContainer3" class="btn btn-md btn-ghost">
 					<svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path clip-rule="evenodd"
@@ -52,7 +51,7 @@
 					</svg>
 				</button>
 			</div>
-			<div class="flex gap-x-3 items-center place-self-end mt-2 ml-14 sm:ml-84">
+			<div class="fixed flex gap-x-4 items-center mt-2 top-0 right-2">
 				<button id="BtnMenu" data-target="rootContainer2" class="btn btn-sm btn-accent">
 					Lil' Src
 				</button>
@@ -88,7 +87,7 @@
 		<div id="rootMain" class="flex flex-col">
 			<div id="rootContainer1">
 				<div id="rootSrc">
-					<div id="rootSide" class="fixed top-22 right-2 z-101">
+					<div id="rootSide" class="flex fixed top-22 right-2 z-101">
 						<div id="rootSideIcon" class="drawer drawer-end">
 							<input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
 							<div class="drawer-content">
