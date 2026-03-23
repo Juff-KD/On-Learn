@@ -1,5 +1,7 @@
 /*
-  Cache-Control: public, max-age=31536000
+  # Previous: Cache-Control: public, max-age=31536000
+  # Changed to a short cache for HTML to ensure fresh content
+  Cache-Control: public, max-age=0, must-revalidate
   X-Frame-Options: DENY
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://unpkg.com https://code.jquery.com; style-src 'self' https://cdn.jsdelivr.net https://unpkg.com 'unsafe-inline'; font-src 'self' https://cdn.jsdelivr.net https://unpkg.com; img-src 'self' data:; connect-src 'self'; worker-src 'self'; manifest-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
@@ -8,8 +10,27 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
 
+
+/
+  # Performance hints: preconnect common CDNs and preload critical CSS/font.
+  # These help Core Web Vitals by reducing connection and resource latency.
+  Link: <https://cdn.jsdelivr.net>; rel=preconnect; crossorigin
+  Link: <https://unpkg.com>; rel=preconnect; crossorigin
+  Link: </css/main.css>; rel=preload; as=style
+
+
 /assets/*
-  Cache-Control: public, max-age=604800
+  # Previous: Cache-Control: public, max-age=604800
+  # If assets are content-hashed, a long cache is safe (1 year):
+  Cache-Control: public, max-age=31536000
+
 
 /images/*
+  # Previous: Cache-Control: public, max-age=604800
   Cache-Control: public, max-age=604800
+  # If images are served with hashed filenames, consider max-age=31536000
+
+
+/pages/staging/*
+  # Staging or non-public pages should not be indexed by search engines
+  X-Robots-Tag: noindex, nofollow

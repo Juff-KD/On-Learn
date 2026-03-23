@@ -1,6 +1,5 @@
 // JS..
 //-------------------------------+++++++++++++---------------------------------//
-
 //-----------------------------+++++++-----------------------------------------//
 
 const dataKeys = [
@@ -15,6 +14,7 @@ const dataKeys = [
 const searchInput = document.querySelector('#searchExpand input[type="text"]');
 const resultsContainer = document.getElementById('searchResult');
 const swapid = document.getElementById('swapid');
+
 
 function toggleClass(element, className, swClass) {
 	if (element.classList.contains(className)) {
@@ -36,7 +36,7 @@ function showResults(query) {
 		filteredResults.forEach(result => {
 			const resultItem = document.createElement('div');
 			resultItem.id = 'resultItem';
-			resultItem.className = 'result-item btn btn-ghost flex flex-row';
+			resultItem.className = 'result-item btn btn-ghost btn-md';
 			resultItem.textContent = result;
 			resultsContainer.appendChild(resultItem);
 
@@ -84,6 +84,22 @@ if (searchInput) {
 
 	}
 }
+
+
+
+// swapCards
+// const ckBox = document.getElementById('ckBox');
+// const ckCheck = document.getElementById('ckCheck');
+//
+// ckBox.addEventListener('click', () => {
+// 	if (ckBox.hasAttribute('checked')) {
+// 		ckCheck.addAttribute('checked');
+// 	}
+// 	// else {
+// 	// 	ckCheck.attributes.remove('checked');
+// 	// }
+// })
+
 
 // Show all results initially
 // showResults('');

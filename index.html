@@ -15,9 +15,11 @@
 
 	<!-- 4. External Stylesheets -->
 	<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
-	<link href="https://cdn.tailwindcss.com" rel="stylesheet" type="text/javascript" />
+	<!-- <link href="https://cdn.tailwindcss.com" rel="stylesheet" type="text/javascript" /> -->
+	<!-- <link href="https://cdn.tailwindcss.com" rel="stylesheet" type="text/javascript" /> -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/expand.min.css" />
 
+	<script src="https://cdn.tailwindcss.com"></script>
 	<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
 	<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 	<!-- 7. Title Tag -->
@@ -58,7 +60,7 @@
 				<!--NOTE: button change-->
 				<button id="BtnThemeChange">
 					<label class="theme-toggle" title="Toggle theme">
-						<input type="checkbox" class="theme-controller" value="valentine" />
+						<input type="checkbox" class="theme-controller" value="emerald" />
 						<span class="theme-toggle-sr">Toggle theme</span>
 						<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="1.8em" height="1.8em"
 							fill="currentColor" class="theme-toggle__expand" viewBox="0 0 32 32">
@@ -233,21 +235,52 @@
 					<div id="rootNavData" class="pt-33">
 						<!-- :NOTE: Lil ai data here-->
 						<article id="lilAiData" class="flex flex-col gap-10 scroll-smooth overflow-y-auto z-9">
-							<section id=" aicard1 scroll-mt-28">
-								<div class="card bg-primary text-primary-content w-76 h-56">
-									<div class="card-body">
-										<h2 class="card-title">Chat-GPT</h2>
-										<p class="text-sm">- Hey..gpt <br>- And starts the conversations..</p>
-										<div class="flex justify-end flex-row gap-16 items-center">
-											<div class="card-actions w-28 h-auto">
-												<button class=" btn">prompts</button>
-											</div>
-											<div class="card-actions w-28 h-auto">
-												<button class="btn">open-web</button>
+							<section id=" aicard1 scroll-mt-28 flex">
+								<div id="btnCardSwitch" class="flex relative left-56 top-16 z-10">
+									<label id="btnWhatIs" class="btn btn-circle swap text-center">
+										<input type="checkbox" />
+										<div id="swapOn" class="swap-on p-2">?</div>
+										<div id="swapOff" class="swap-off p-2">X</div>
+									</label>
+								</div>
+								<label id="switchCard" class="swap">
+									<input type="checkbox" />
+									<div id="swapCardOne"
+										class="swap-on card bg-primary text-primary-content w-76 h-56">
+										<div class="card-body">
+											<h2 class="card-title">Chat-GPT</h2>
+											<p class="text-sm">- Hey..gpt <br>- And starts the conversations..</p>
+											<div class="flex justify-end flex-row gap-16 items-center">
+												<div class="card-actions w-28 h-auto">
+													<button class=" btn">open-web</button>
+												</div>
+												<div class="card-actions w-28 h-auto">
+													<button class="btn">prompts</button>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
+									<div id="swapCardTwo"
+										class="swap-off card bg-primary text-primary-content w-76 h-56">
+										<div class="card-body">
+											<h2 class="card-title">Chat-GPT</h2>
+											<p class="text-sm">- Sooo.. <br>- And starts the conversations..</p>
+											<div class="flex justify-end flex-row gap-16 items-center">
+												<div class="card-actions w-28 h-auto">
+													<button class=" btn">open-web</button>
+												</div>
+												<div class="card-actions w-28 h-auto">
+													<button class="btn">prompts</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- this hidden checkbox controls the state -->
+									<!-- <input type="checkbox" /> -->
+
+									<!-- <div class="swap-on">😈</div> -->
+									<!-- <div class="swap-off">😇</div> -->
+								</label>
 							</section>
 							<section id=" aicard2">
 								<div class="card bg-primary text-primary-content w-76 h-56 ">
@@ -322,7 +355,7 @@
 								<div class="card bg-primary text-primary-content w-76 h-56 ">
 									<div class="card-body">
 										<h2 class="card-title">Palette</h2>
-										<p class="text-sm">- Hey..gpt <br>- And starts the conversations..</p>
+										<p class="text-sm">- Hey..gpt <br>- And now, starts the conversations..</p>
 										<div class="flex justify-end flex-row gap-16 items-center">
 											<div class="card-actions w-28 h-auto">
 												<button class=" btn">prompts</button>
